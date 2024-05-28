@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     private let dataUrlStr = "https://jsonplaceholder.typicode.com/posts?_page=1&_limit="
     private var listArray = [ListModel]()
+    private var pageCount = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     private func callApi(){
-        ApiManager.shared.getApiData(urlStr: dataUrlStr, pageCount: 10, resultType: [ListModel].self) { [weak self] result in
+        ApiManager.shared.getApiData(urlStr: dataUrlStr, pageCount: pageCount, resultType: [ListModel].self) { [weak self] result in
             if let result, result.isEmpty == false{
                 self?.listArray = result
                 DispatchQueue.main.async {
@@ -37,8 +38,10 @@ class ViewController: UIViewController {
             }
         }
     }
+    
 }
 
+//MARK: --------------- TableView Methods Extension---------------
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listArray.count
@@ -56,5 +59,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dataObject = listArray[indexPath.row]
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let detailsVC = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailsVC.dataObject = dataObject
+        self.present(detailsVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if listArray.count - 1  == indexPath.row {
+            pageCount = pageCount + 10
+            callApi()
+        }
     }
 }

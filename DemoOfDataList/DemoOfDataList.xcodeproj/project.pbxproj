@@ -17,6 +17,7 @@
 		85E18B172C06239400FB3F24 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E18B162C06239400FB3F24 /* ListModel.swift */; };
 		85E18B1B2C06264F00FB3F24 /* DataListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E18B192C06264F00FB3F24 /* DataListTVC.swift */; };
 		85E18B1C2C06264F00FB3F24 /* DataListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E18B1A2C06264F00FB3F24 /* DataListTVC.xib */; };
+		85E18B1E2C063BAA00FB3F24 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E18B1D2C063BAA00FB3F24 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		85E18B162C06239400FB3F24 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		85E18B192C06264F00FB3F24 /* DataListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListTVC.swift; sourceTree = "<group>"; };
 		85E18B1A2C06264F00FB3F24 /* DataListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataListTVC.xib; sourceTree = "<group>"; };
+		85E18B1D2C063BAA00FB3F24 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				85E18B072C06221F00FB3F24 /* Assets.xcassets */,
 				85E18B092C06221F00FB3F24 /* LaunchScreen.storyboard */,
 				85E18B0C2C06221F00FB3F24 /* Info.plist */,
+				85E18B1D2C063BAA00FB3F24 /* DetailsViewController.swift */,
 			);
 			path = DemoOfDataList;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				85E18B032C06221D00FB3F24 /* ViewController.swift in Sources */,
 				85E18AFF2C06221D00FB3F24 /* AppDelegate.swift in Sources */,
 				85E18B012C06221D00FB3F24 /* SceneDelegate.swift in Sources */,
+				85E18B1E2C063BAA00FB3F24 /* DetailsViewController.swift in Sources */,
 				85E18B172C06239400FB3F24 /* ListModel.swift in Sources */,
 				85E18B1B2C06264F00FB3F24 /* DataListTVC.swift in Sources */,
 			);
