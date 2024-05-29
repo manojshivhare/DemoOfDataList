@@ -11,18 +11,18 @@ class DetailsViewController: UIViewController {
     
     //MARK: --------------- IBOutlet---------------
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var idLabel: UILabel!
-    
     @IBOutlet weak var userIdLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    //MARK: --------------- Variable---------------
     var dataObject: ListModel?
     
+    //MARK: --------------- View Life Cycle---------------
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationItem.title = "Details of data"
         updateData()
     }
     

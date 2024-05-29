@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		858886902C0707FC0084642C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				85E18B022C06221D00FB3F24 /* ViewController.swift */,
+				85E18B1D2C063BAA00FB3F24 /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		85E18AF22C06221D00FB3F24 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +78,13 @@
 				85E18B182C06263400FB3F24 /* View */,
 				85E18B152C0622BB00FB3F24 /* Model */,
 				85E18B122C06227000FB3F24 /* APIManager */,
+				858886902C0707FC0084642C /* ViewControllers */,
 				85E18AFE2C06221D00FB3F24 /* AppDelegate.swift */,
 				85E18B002C06221D00FB3F24 /* SceneDelegate.swift */,
-				85E18B022C06221D00FB3F24 /* ViewController.swift */,
 				85E18B042C06221D00FB3F24 /* Main.storyboard */,
 				85E18B072C06221F00FB3F24 /* Assets.xcassets */,
 				85E18B092C06221F00FB3F24 /* LaunchScreen.storyboard */,
 				85E18B0C2C06221F00FB3F24 /* Info.plist */,
-				85E18B1D2C063BAA00FB3F24 /* DetailsViewController.swift */,
 			);
 			path = DemoOfDataList;
 			sourceTree = "<group>";
